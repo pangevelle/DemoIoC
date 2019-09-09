@@ -39,7 +39,7 @@ namespace DemoIoC
             ConstructorInfo implentationCtor = implentationCtors[0];
             var ctorParams = implentationCtor.GetParameters();
 
-            // resolve implementation's constructor's parameters
+            // recursively resolve constructor's parameters
             var ctorParamsImplentation = new List<object>();
             foreach (var ctorParam in ctorParams)
             {
